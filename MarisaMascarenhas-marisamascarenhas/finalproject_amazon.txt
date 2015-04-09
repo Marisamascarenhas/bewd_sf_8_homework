@@ -1,0 +1,62 @@
+Project : Test your Birding Skills !!
+
+Description : Basic Quiz & Advanced Quiz
+
+Each quiz presents 10 bird images one at a time
+
+With each image the user needs to guess the name of the bird 
+The user is given four options and need to select one
+A correct answer increase score by 2 a wrong answer reduces score by 1
+The user has the option to listen to a bird score as well
+At the end of the quiz the user views his final score
+
+Controller
+Index
+New 
+Show
+
+Views: 
+Index View :Introduction page
+New View : Question Page
+Show View: Final Score Page
+
+App : Birdquiz_App
+
+Controller Bird
+
+Model Bird
+bird_id
+bird_photo				jpeg
+bird_sound				mp3 
+bird_name_correct                       string
+bird_name1				string
+bird_name2				string
+bird_name3				string
+
+I think I need only one model for my project so I do not need any associations.
+
+Questions : images & sounds ?
+_________________________________________________________________________
+
+Amazon Models
+
+category is like household/ sports/ gift_items etc
+
+Customer			Order			Category
+customer_id			order_id		category_id	
+e-mail				customer_id		category_name
+password			order_item
+				category_id  
+customer has many orders
+order belongs to a customer
+order has many categories
+category has many orders
+
+
+
+
+
+
+
+
+
