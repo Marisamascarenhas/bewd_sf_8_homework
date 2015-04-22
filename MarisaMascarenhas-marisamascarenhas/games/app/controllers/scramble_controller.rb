@@ -1,2 +1,0 @@
-class ScrambleController < ApplicationController
-end

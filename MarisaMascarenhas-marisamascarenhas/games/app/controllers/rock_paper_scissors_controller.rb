@@ -10,21 +10,21 @@ class RockPaperScissorsController < ApplicationController
       elsif random==2 then @secret_action='scissors'
       end
     #  puts @secret_action
-    
-    if @chosen_action == @secret_action then @outcome_partial = 'tie'
-    else @outcome_partial= 'win'
-    
-    #if @chosen_action =='rock' then 
-     # if @secret_action = 'scissors' then @outcome_partial='win'
-      #elsif @secret_action = 'paper' then @outcome_partial='lose'
-       # else @outcome_partial = 'tie'
-        #end
+
+
+     if @chosen_action=='rock' && @secret_action=='scissors' then @outcome_partial='win'
+     elsif @chosen_action=='scissors' && @secret_action=='paper' then @outcome_partial='win'
+     elsif @chosen_action=='paper' && @secret_action=='rock' then @outcome_partial='win'
+     elsif @chosen_action == @secret_action then @outcome_partial = 'tie'
+     else @outcome_partial='lose'
+     end
+
+
     end  
 
     #then if @secret_action=='rock' then @outcome_partial = 'tie' 
      #    elsif @secret_action=='scissors' then @outcome_partial = 'win'
       #              else @outcome_partial='lose'
-    end
+  
     
   end
-

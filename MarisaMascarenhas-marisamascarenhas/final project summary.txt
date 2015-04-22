@@ -1,0 +1,47 @@
+Project : Test your Birding Skills !!
+
+
+As a user I can login
+As a user I can choose level of quiz
+As a user I can press button to hear bird sound
+As a user I can elect the name of the bird from a list of 4 names
+As an administrator I can update the database with a new quiz every month
+
+Description : Basic Quiz & Advanced Quiz
+
+Each quiz presents 8 bird images one at a time
+
+With each image the user needs to guess the name of the bird 
+The user is given four options and need to select one
+A correct answer increase score by 2 a wrong answer reduces score by 1
+The user has the option to listen to the bird sound as well
+At the end of the quiz the user views his final score
+
+App : Birdquiz_App
+
+Controller Users
+Controller Birds
+ 
+Index View :Introduction page
+New View : Question Page
+Show View: Final Score Page
+
+Controller Bird
+
+Model Bird
+bird_id
+bird_photo				jpeg
+bird_sound				mp3 
+bird_name_correct                       string
+bird_name1				string
+bird_name2				string
+bird_name3				string
+
+
+ 
+
+
+
+
+
+

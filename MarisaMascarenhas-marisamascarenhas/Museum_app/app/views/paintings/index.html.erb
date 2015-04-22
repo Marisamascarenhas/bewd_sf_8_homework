@@ -1,0 +1,47 @@
+
+<h1> Welcome to my Museums App </h1>
+
+<table>
+  <tr>
+    <th>Title   </th>
+    <th>Artist  </th>
+    <th>Museum Name  </th>
+  
+
+    </tr>
+
+    <% @paintings.each do |painting| %>
+      <tr>
+      <td><%= painting.title %></td>
+      <td><%= painting.artist.name %></td>
+      <td><%= painting.museum.museum_name %></td>
+      
+      <td><%=link_to 'Display Painting', painting_path(painting) %></td>
+      <%end%>
+
+
+<br>
+  <%= form_tag '/', method: :get do %>
+  <%= search_field_tag :q, params[:q] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<br/>
+
+<h3>
+
+ <%=link_to 'More about Museums', museums_path%>
+</h3>
+
+
+<h3>
+
+ <%=link_to 'More about Artists', artists_path%>
+</h3>
+
+
+
+
+<h3>
+ <%=link_to 'Add A New Painting', new_painting_path %>
+ </h3>

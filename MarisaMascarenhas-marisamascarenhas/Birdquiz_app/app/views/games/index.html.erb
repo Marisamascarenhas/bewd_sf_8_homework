@@ -1,0 +1,17 @@
+<h1>Welcome to our monthly quiz !!</h1>
+
+<h2> Game details </h2>
+
+<h4> You will see 5 bird images one at a time </h2>
+<h4> You need to select the correct bird name for each image </h3>
+<h5> A correct answer increases score by 2 </h4>
+<h5> A wrong answer reduces score by 1</h4>
+<h4> You will see your final score at the end of the game</h3>
+<br>
+
+<%=link_to 'Start Game', bird_names_path%>
+
+<%if current_user.admin %>
+<%=link_to 'Add Birds', "#"%>
+<%end%>
+  

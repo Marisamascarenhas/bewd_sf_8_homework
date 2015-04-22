@@ -1,0 +1,14 @@
+
+<h3>View your link </h3>
+<%= form_for @shortcut do |f| %>
+	<p>
+	<%= f.label :hash_code %><br>
+	<%= f.text_field :hash_code %>
+	</p>
+    <p>
+	<%= f.label :my_link %><br>
+	<%= f.text_field :my_link%>
+	</p>
+
+<% end %>
+

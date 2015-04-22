@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bird_photo: MyText
+  bird_name: MyString
+  name1_error: MyString
+  name2_error: MyString
+  name3_error: MyString
+
+two:
+  bird_photo: MyText
+  bird_name: MyString
+  name1_error: MyString
+  name2_error: MyString
+  name3_error: MyString

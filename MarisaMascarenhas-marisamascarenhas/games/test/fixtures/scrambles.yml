@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word: MyString
+  word_scrambled: MyString
+
+two:
+  word: MyString
+  word_scrambled: MyString

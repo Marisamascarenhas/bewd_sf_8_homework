@@ -1,0 +1,55 @@
+<h1>Select your response from the choices below!!</h1>
+
+
+<h2>Choose one of the 4 options</h2>
+<p> Choose carefully....you only get one try</p>
+<ul>
+<h2>Pick a number:</h2>
+<ul>
+
+
+<%@bird_names.each do |bird_name|%>
+
+<%=image_tag bird_name.bird_photo%>
+
+<%namearray=[]%>
+
+<%namearray[1]=bird_name.bird_name%>
+<%namearray[2]=bird_name.name1_error%>
+<%namearray[3]=bird_name.name2_error%>
+<%namearray[4]=bird_name.name3_error%>
+
+<%#namearray=namearray.Scramble%>
+
+
+  <% 1.upto 4 do |number| %>
+  <li>
+  <tr>
+  <td> <%= link_to number, bird_name_path(bird_name) %> </td>
+  <td> <%= namearray[number]%> </td>
+  </tr>
+  </li>
+  <% end %>
+</ul>
+
+<%end%>
+
+
+
+
+
+
+</h3>
+
+
+
+
+<br/>
+
+<h3>
+<br>
+
+
+
+
+

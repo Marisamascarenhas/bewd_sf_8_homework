@@ -1,0 +1,31 @@
+<h1>List of All Artists</h1>
+
+
+<table>
+  <tr>
+    <th>Name of Artist</th>
+  
+
+
+    </tr>
+
+    <% @artists.each do |artist|%>
+      <tr>
+    
+      <td><%= artist.name %></td>
+      
+      <td><%=link_to 'Display Paintings', artist_path(artist) %></td>
+      <% end%>
+
+
+<h3>
+ <%=link_to 'Add a New Artist', new_artist_path %>
+ </h3>
+
+ 
+
+
+
+
+
+

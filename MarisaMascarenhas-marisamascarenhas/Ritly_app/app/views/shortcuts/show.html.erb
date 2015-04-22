@@ -1,0 +1,15 @@
+<p>
+<strong>my_link:</strong>
+<%= @shortcut.my_link%>
+</p>
+
+<p>
+<strong>hash_code:</strong>
+<%= @shortcut.hash_code%>
+</p>
+
+<h3> Go directly to your URLlink </h3>
+<%= link_to @shortcut.hash_code, @shortcut.my_link%>
+
+<h3> Preview URL link connected to a Code you enter </h3>
+<%= link_to "Preview",new_shortcut_path%>

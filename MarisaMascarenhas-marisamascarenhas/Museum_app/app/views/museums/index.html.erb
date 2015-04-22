@@ -1,0 +1,29 @@
+ 
+
+<h1> List of Museums </h1>
+
+<table>
+  <tr>
+    <th>Museum Name</th>
+  
+
+
+    </tr>
+
+    <% @museums.each do |museum| %>
+      <tr>
+    
+      <td><%= museum.museum_name %></td>
+      
+      <td><%=link_to 'Display Paintings', museum_path(museum) %></td>
+      <% end%>
+
+
+<h3>
+ <%=link_to 'Add a New Museum', new_museum_path %>
+ </h3>
+
+ 
+
+
+
