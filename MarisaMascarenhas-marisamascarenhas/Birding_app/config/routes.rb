@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   
-  get 'games/index'
-
-  get 'games/show'
-
   devise_for :users
-  root 'games#index'
-  resources :bird_names 
-  resources :games# The priority is based upon order of creation: first created -> highest priority.
+root 'locations#index'
+  
+  
+  resources :locations
+
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

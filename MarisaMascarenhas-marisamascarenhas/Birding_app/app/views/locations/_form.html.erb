@@ -1,0 +1,31 @@
+
+<% if @location.errors.any? %>
+  <h2>There were errors saving your painting</h2>
+  <ul>
+    <% @location.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+
+  <%=form_for @location do |f| %>
+  <fieldset>
+    <div class='fields'>
+      <%= f.label :location_name %>
+      <%= f.text_field :location_name %>
+    </div>
+    <div class='fields'>
+      <%= f.label :Longitude %>
+      <%= f.text_field :longitude %>
+    </div>
+    <div class='fields'>
+      <%= f.label :Latitude %>
+      <%= f.text_field :latitude %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
+
+<br/>

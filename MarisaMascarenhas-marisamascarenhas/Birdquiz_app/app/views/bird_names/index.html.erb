@@ -25,7 +25,7 @@
   <% 1.upto 4 do |number| %>
   <li>
   <tr>
-  <td> <%= link_to number, bird_name_path(bird_name) %> </td>
+  <td> <%= link_to number, bird_name_path(bird_name, number) %> </td>
   <td> <%= namearray[number]%> </td>
   </tr>
   </li>

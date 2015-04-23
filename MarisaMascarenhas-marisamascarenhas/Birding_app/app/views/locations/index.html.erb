@@ -1,0 +1,25 @@
+<h1>See Bird Activity in your Favorite Locations !!</h1>
+
+<p>Select which location you would like to check today</p>
+
+
+<table>
+  <tr>
+    <th>Favorite Locations</th>
+  
+
+
+    </tr>
+
+    <% @locations.each do |location| %>
+      <tr>
+    
+      <td><%= location.location_name %></td>
+      
+      <td><%=link_to 'Birds seen here yesterday', location_path(location) %></td>
+      <% end%>
+
+
+<h3>
+ <%=link_to 'Add your favorite location', new_location_path %>
+ </h3>
