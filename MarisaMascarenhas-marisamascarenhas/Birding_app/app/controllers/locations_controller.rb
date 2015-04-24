@@ -14,10 +14,9 @@ class LocationsController < ApplicationController
   
   	@titles = JSON.load(RestClient.get("http://ebird.org/ws1.1/data/obs/geo/recent?lng=#{x.round(2)}&lat=#{y.round(2)}&dist=50&back=1&maxResults=500&locale=en_US&fmt=json"))
     
-    
-  end
-
-
+    end
+  
+  
 
   def new
   	@location=Location.new
@@ -33,6 +32,17 @@ class LocationsController < ApplicationController
 	   	render 'new'
 	   end
   end
+    
+   
+  def destroy
+  @location = Location.find(params[:id])
+  @location.destroy
+ 
+  redirect_to root_path
+end 
+   
+
+
 
   private
   def location_params

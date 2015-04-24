@@ -1,17 +1,21 @@
 
 
- <h2> Birds seen today </h2>
-
-
-  <h3><%=@location.location_name%></h3>cd
+ <h2> Birds seen yesterday at the <%=@location.location_name%></h2>
     
- <%=@titles.each do |title|%>
+ <%@titles.each do |title|%>
  
  <li><%= title["comName"] %></li>
 
  <%end%>
 
 
+<%=image_tag 'https://mail.google.com/mail/u/0/?ui=2&ik=2ecdb97af2&view=att&th=14ce779ebeed55e4&attid=0.1&disp=safe&realattid=f_i8uhjg9w0&zw'%>
 
+ 
+
+<%=link_to 'Back', locations_path %>
+
+
+<%#= image_tag 'http://upload.wikimedia.org/wikipedia/commons/2/24/Yellow_bird.JPG', width=20 height=20%>
 
     

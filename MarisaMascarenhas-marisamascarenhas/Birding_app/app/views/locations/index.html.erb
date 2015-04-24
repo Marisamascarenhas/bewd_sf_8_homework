@@ -1,6 +1,6 @@
 <h1>See Bird Activity in your Favorite Locations !!</h1>
 
-<p>Select which location you would like to check today</p>
+<p>Select a location you would like to check today</p>
 
 
 <table>
@@ -9,17 +9,25 @@
   
 
 
-    </tr>
+     </tr>
 
     <% @locations.each do |location| %>
       <tr>
     
       <td><%= location.location_name %></td>
+      <td>                        </td>
       
       <td><%=link_to 'Birds seen here yesterday', location_path(location) %></td>
+      <td>                        </td>
+      <td><%=link_to 'Remove this location', location_path(location), method: :delete %> </td> 
+      
       <% end%>
 
 
 <h3>
  <%=link_to 'Add your favorite location', new_location_path %>
  </h3>
+
+<%=image_tag 'https://mail.google.com/mail/u/0/?ui=2&ik=2ecdb97af2&view=fimg&th=14cde0540533cc99&attid=0.1&disp=inline&realattid=f_i8rv2mto0&safe=1&attbid=ANGjdJ8gGbFTTcCrxdpX9AxhIQijk9OkS1KhH-7LTv0vNnYzOqiTjCMclIEhaGQg0B3eiubTX_G5K4adlgdqX1uFldBWYKg3vo2HYo1h2UGKEF6ebiypu2n46jYEzGA&ats=1429658437794&rm=14cde0540533cc99&zw&sz=w1170-h528'%>
+
+
