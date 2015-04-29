@@ -1,11 +1,12 @@
 class LocationsController < ApplicationController
   
   def index
+    #displays favorite locations
   	@locations=current_user.locations
   end
 
   def show
-
+    #displays bird names & photos in the chosen favorite locations
   	@location=Location.find(params[:id])
   
   	x= @location.longitude
@@ -13,7 +14,7 @@ class LocationsController < ApplicationController
 
     @bird_display_array = []
     # get list of birds seen from e bird 
-  	@titles = JSON.load(RestClient.get("http://ebird.org/ws1.1/data/obs/geo/recent?lng=#{x.round(2)}&lat=#{y.round(2)}&dist=10&back=7&maxResults=500&locale=en_US&fmt=json"))
+  	@titles = JSON.load(RestClient.get("http://ebird.org/ws1.1/data/obs/geo/recent?lng=#{x.round(2)}&lat=#{y.round(2)}&dist=50&back=6&maxResults=500&locale=en_US&fmt=json"))
     
     # get photo from flickr for each bird seen in e-bird 
     @titles.each do |title|
@@ -36,8 +37,6 @@ class LocationsController < ApplicationController
       end
         
        #code to get the photo url
-       #if @bird_json['photos']['photo']= [] then @bird_photo_final = " " 
-       #else
        @bird_photo_final = "https://farm#{@bird_farm_id}" + ".staticflickr.com/#{@bird_server_id}/#{@bird_photo_id}_#{@bird_secret}_m.jpg" 
        #@bird_photo_final = "https://farm#{@bird_json['photos']['photo'].first['farm']}" + ".staticflickr.com/#{@bird_json['photos']['photo'].first['server']}/#{}_#{@bird_json['photos']['photo'].first['secret']}_m.jpg" 
        @bird_hash = {:bird_name_end =>@bird_name_common,:bird_photo_final_end=>@bird_photo_final}
@@ -50,6 +49,7 @@ class LocationsController < ApplicationController
   
 
   def new
+    # add a new favorite location
   	@location=Location.new
   end
 
@@ -66,6 +66,7 @@ class LocationsController < ApplicationController
     
    
   def destroy
+    # delete a location when no longer favorite
   @location = Location.find(params[:id])
   @location.destroy
  
